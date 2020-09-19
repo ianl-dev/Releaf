@@ -13,7 +13,7 @@ export default function DetectRecyclings() {
 
       <View style={styles.container}>
         <Avatar.Icon size={80} icon="clock" style={styles.avatar} />
-        <Text style={styles.center}>IAN SUCKS  </Text>
+        <Text style={styles.center}>IAN SUCKS! </Text>
 
         <View style={styles.btn}>
           <Button>False</Button>
