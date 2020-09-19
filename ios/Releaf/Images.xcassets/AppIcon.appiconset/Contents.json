@@ -1,47 +1,55 @@
 {
   "images" : [
     {
+      "filename" : "icons8-leaf-103.png",
       "idiom" : "iphone",
       "scale" : "2x",
-      "size" : "20x20"
-    },
-    {
-      "idiom" : "iphone",
-      "scale" : "3x",
       "size" : "20x20"
     },
     {
       "filename" : "icons8-leaf-100.png",
       "idiom" : "iphone",
+      "scale" : "3x",
+      "size" : "20x20"
+    },
+    {
+      "filename" : "icons8-leaf-101.png",
+      "idiom" : "iphone",
       "scale" : "2x",
       "size" : "29x29"
     },
     {
+      "filename" : "icons8-leaf-102.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "29x29"
     },
     {
+      "filename" : "icons8-leaf-104.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "40x40"
     },
     {
+      "filename" : "icons8-leaf-105.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "40x40"
     },
     {
+      "filename" : "icons8-leaf-106.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "60x60"
     },
     {
+      "filename" : "icons8-leaf-107.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "60x60"
     },
     {
+      "filename" : "icons8-leaf-108.png",
       "idiom" : "ios-marketing",
       "scale" : "1x",
       "size" : "1024x1024"
