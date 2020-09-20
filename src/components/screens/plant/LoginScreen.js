@@ -70,7 +70,7 @@ export default function LoginScreen({navigation}) {
         <Button
           style={styles.confirm_btn_shape}
           mode="contained"
-          onPress={() => navigation.navigate('MakeArt', chosen)}>
+          onPress={() => navigation.navigate('MakeArt')}>
           Login
         </Button>
       </View>

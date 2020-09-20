@@ -30,9 +30,38 @@ const styles = StyleSheet.create({
   },
 });
 
-class DetectRecyclings extends Component{
-  render() {
-    return (
+// class DetectRecyclings extends Component{
+//   render() {
+//     return (
+//       <View style={styles.container}>
+//         <RNCamera
+//           style={{ flex: 1, alignItems: 'center' }}
+//           ref={ref => {
+//             this.camera = ref
+//           }}
+//         />
+//         <View style={{ flex: 0, flexDirection: 'row', justifyContent: 'center' }}>
+//           <TouchableOpacity onPress={() => navigation.navigate('MakeArt')} style={styles.capture}>
+//             <Text style={{ fontSize: 14 }}> SNAP </Text>
+//           </TouchableOpacity>
+//         </View>
+//       </View>
+//     )
+//   }
+
+//   takePicture = async () => {
+//     if (this.camera) {
+//       const options = { quality: 0.5, base64: true };
+//       const data = await this.camera.takePictureAsync(options);
+//       console.log(data.uri);
+//     }
+//   };
+  
+// }
+//this.takePicture.bind(this)
+
+export default function DetectRecyclings({navigation}){
+  return (
       <View style={styles.container}>
         <RNCamera
           style={{ flex: 1, alignItems: 'center' }}
@@ -41,22 +70,10 @@ class DetectRecyclings extends Component{
           }}
         />
         <View style={{ flex: 0, flexDirection: 'row', justifyContent: 'center' }}>
-          <TouchableOpacity onPress={this.takePicture.bind(this)} style={styles.capture}>
+          <TouchableOpacity onPress={() => navigation.navigate('MakeArt')} style={styles.capture}>
             <Text style={{ fontSize: 14 }}> SNAP </Text>
           </TouchableOpacity>
         </View>
       </View>
     )
-  }
-
-  takePicture = async () => {
-    if (this.camera) {
-      const options = { quality: 0.5, base64: true };
-      const data = await this.camera.takePictureAsync(options);
-      console.log(data.uri);
-    }
-  };
-  
 }
-
-export default DetectRecyclings
