@@ -1,5 +1,5 @@
 try:
-    import unzip_requirements
+    import unzip_torch
 except ImportError:
     pass
 import io
