@@ -1,10 +1,44 @@
 import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
+  // Tag style
+  tag_outer: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-evenly',
+    paddingBottom: 10,
+    width: 390,
+    paddingLeft: 25,
+  },
+  tag_show: {
+    marginRight: 3,
+    paddingRight: 3,
+
+    marginBottom: 10,
+  },
+  tag_wrap: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    paddingBottom: 15,
+    paddingTop: 10,
+    paddingLeft: 15,
+  },
+  tag: {
+    flexWrap: 'wrap',
+    width: 100,
+    alignContent: 'center',
+    marginRight: 10,
+    paddingLeft: 3,
+    paddingRight: -10,
+  },
   // Survey style
   outer: {
     flex: 1,
     backgroundColor: '#fff',
+  },
+  card_contain: {
+    borderColor: '#000000',
   },
   container: {
     flex: 1,
@@ -21,10 +55,15 @@ const styles = StyleSheet.create({
   },
   center: {
     fontSize: 27,
+    paddingBottom: 30,
     alignSelf: 'center',
     fontWeight: 'bold',
   },
-  // ADULT / KID
+  center_art: {
+    fontSize: 22,
+    alignSelf: 'center',
+    paddingTop: 5,
+  },
   label: {
     fontSize: 16,
     fontWeight: 'bold',
@@ -92,6 +131,11 @@ const styles = StyleSheet.create({
     height: 50,
     width: 90,
   },
+  btn_new: {
+    flex: 1,
+    // borderRadius: 15,
+    justifyContent: 'flex-end',
+  },
   btn_cicle: {
     paddingTop: 6,
     paddingBottom: 5,
@@ -117,7 +161,6 @@ const styles = StyleSheet.create({
     width: 350,
     paddingTop: 30, // keep distance from text
   },
-  // Calendar
   calendar: {
     paddingTop: 10,
     alignSelf: 'center',
@@ -127,7 +170,7 @@ const styles = StyleSheet.create({
   calendar_btn: {
     flexDirection: 'row',
     justifyContent: 'space-around',
-    marginTop: 10,
+    paddingTop: 20,
   },
   calendar_btn_content: {
     height: 50,
@@ -138,6 +181,8 @@ const styles = StyleSheet.create({
   },
   confirm_btn_shape: {
     borderRadius: 100,
+    height: 50,
+    paddingTop: 8,
   },
 });
 

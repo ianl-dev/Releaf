@@ -14,13 +14,13 @@ export function ShowInstructables({navigation, selected, setSelected}) {
   for (let i = 0; i < selected.length; i++) {
     // Render however many blocks there are
     buffer.push(
-      <Card>
+      <Card style={styles.card_contain}>
         <Card.Content>
           <Title>{selected[i]['Name']}</Title>
         </Card.Content>
-        <View>
+        <View style={styles.tag_wrap}>
           {selected[i]['Tags'].split(', ').map((x) => (
-            <Chip>{x}</Chip>
+            <Chip style={styles.tag}>{x}</Chip>
           ))}
         </View>
         <Card.Cover
@@ -30,11 +30,12 @@ export function ShowInstructables({navigation, selected, setSelected}) {
         />
         <Card.Actions>
           <Button
+            style={styles.btn_new}
             mode="contained"
             onPress={() =>
               navigation.navigate('Browser', selected[i]['Website'])
             }>
-            Make
+            Build
           </Button>
         </Card.Actions>
       </Card>,

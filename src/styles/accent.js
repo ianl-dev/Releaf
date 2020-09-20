@@ -3,6 +3,9 @@ import React from 'react';
 import {StyleSheet} from 'react-native';
 
 export default StyleSheet.create({
+  image: {
+    marginLeft: 35,
+  },
   container: {
     // Structure
     flex: 1,

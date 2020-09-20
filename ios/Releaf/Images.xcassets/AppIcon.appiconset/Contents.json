@@ -37,19 +37,28 @@
       "size" : "40x40"
     },
     {
+<<<<<<< HEAD
+=======
       "filename" : "icons8-leaf-106.png",
+>>>>>>> 36f3031c1aeac19253395bf39cc3afc9e3f89048
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "60x60"
     },
     {
+<<<<<<< HEAD
+=======
       "filename" : "icons8-leaf-107.png",
+>>>>>>> 36f3031c1aeac19253395bf39cc3afc9e3f89048
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "60x60"
     },
     {
+<<<<<<< HEAD
+=======
       "filename" : "icons8-leaf-108.png",
+>>>>>>> 36f3031c1aeac19253395bf39cc3afc9e3f89048
       "idiom" : "ios-marketing",
       "scale" : "1x",
       "size" : "1024x1024"

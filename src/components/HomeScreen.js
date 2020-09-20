@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {View} from 'react-native';
+import {View, Image} from 'react-native';
 
 import {Button, Text} from 'react-native-paper';
 
@@ -15,6 +15,8 @@ import style from '../styles/accent';
 const HomeScreen = ({navigation}) => (
   <View style={style.container}>
     <Text style={style.title}>Releaf</Text>
+
+    <Image style={style.image} source={require('../images/logo.png')} />
 
     {/* Allow the user to go to the plan and explore sections */}
     <Button onPress={() => navigation.navigate('Scan')} style={style.button}>

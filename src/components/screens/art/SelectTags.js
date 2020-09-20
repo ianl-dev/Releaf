@@ -1,7 +1,7 @@
 // React-native frontend
 import React, {useState, useEffect} from 'react';
 import {SafeAreaView, View} from 'react-native';
-import {Card, Chip, Title} from 'react-native-paper';
+import {Card, Chip, Title, Button, Text} from 'react-native-paper';
 
 import {styles} from '../../../styles/form-style';
 import {ScrollView} from 'react-native-gesture-handler';
@@ -35,7 +35,6 @@ export default function SelectTags({navigation}) {
 
   // Use hook to keep track of chosen tags
   const [chosen, setChosen] = useState([]);
-  const [dummy, setDummy] = useState(1);
 
   // Select by highlighting tags
   function onChosen(value) {
@@ -62,9 +61,11 @@ export default function SelectTags({navigation}) {
   // arrow function, creates an empty function that points to a function you already defined
   return (
     <SafeAreaView style={styles.container}>
-      <View>
+      <Text style={styles.center}>Choose your materials</Text>
+      <View style={styles.tag_outer}>
         {tags.map((x) => (
           <Chip
+            style={styles.tag_show}
             mode="outlined"
             key={x}
             selected={onHighlight(x)}
@@ -72,6 +73,14 @@ export default function SelectTags({navigation}) {
             {x}
           </Chip>
         ))}
+      </View>
+      <View style={styles.calendar_btn}>
+        <Button
+          style={styles.confirm_btn_shape}
+          mode="contained"
+          onPress={() => navigation.navigate('MakeArt', chosen)}>
+          GO
+        </Button>
       </View>
     </SafeAreaView>
   );
