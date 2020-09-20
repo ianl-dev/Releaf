@@ -20,6 +20,8 @@ const HomeScreen = ({navigation}) => (
     <Button onPress={() => navigation.navigate('Scan')} style={style.button}>
       Scan
     </Button>
+
+    {/* Fetch all instructables to show when entering the*/}
     <Button onPress={() => navigation.navigate('MakeArt')} style={style.button}>
       Make art
     </Button>

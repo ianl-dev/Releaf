@@ -1,3 +1,5 @@
+@import Firebase;
+
 #import "AppDelegate.h"
 
 #import <React/RCTBridge.h>
@@ -43,6 +45,7 @@ static void InitializeFlipper(UIApplication *application) {
   rootViewController.view = rootView;
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
+  [FIRApp configure];
   return YES;
 }
 

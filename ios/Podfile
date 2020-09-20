@@ -31,3 +31,6 @@ target 'Releaf-tvOS' do
     # Pods for testing
   end
 end
+
+
+pod 'Firebase/Analytics'

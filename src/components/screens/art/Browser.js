@@ -4,14 +4,15 @@ import {WebView} from 'react-native-webview';
 import {styles} from '../../../styles/form-style';
 import {Appbar} from 'react-native-paper';
 
-export default function Browser({navigation}) {
+export default function Browser({route, navigation}) {
+  const link = route.params;
   return (
     <SafeAreaView style={styles.outer}>
       <Appbar.Header>
         <Appbar.BackAction onPress={() => navigation.navigate('MakeArt')} />
-        <Appbar.Content title="AI" />
+        <Appbar.Content title="Make your art!" />
       </Appbar.Header>
-      <WebView source={{uri: 'https://blog.jscrambler.com'}} />
+      <WebView source={{uri: link}} />
     </SafeAreaView>
   );
 }
