@@ -6,16 +6,18 @@ import {createStackNavigator} from '@react-navigation/stack';
 import HomeScreen from '../HomeScreen';
 
 // Scan (Object detection)
-import DetectRecyclings from '../screens/scan/DetectRecyclings';
+import ScanScreen from '../screens/scan/ScanScreen';
 
 // Make art
-import ShowInstructibles from '../screens/art/ShowInstructibles';
+import SelectTags from '../screens/art/SelectTags';
+import MakeArtScreen from '../screens/art/MakeArtScreen';
+import Browser from '../screens/art/Browser';
 
 // Plant
-import VirtualPlant from '../screens/plant/VirtualPlant';
+import ViewPlantScreen from '../screens/plant/ViewPlantScreen';
 
 // Social
-import Forum from '../screens/social/Forum';
+import ForumScreen from '../screens/social/ForumScreen';
 
 // Use a Stack navigator
 const Stack = createStackNavigator();
@@ -33,17 +35,19 @@ const MainNavigator = () => (
     {/* Home */}
     <Stack.Screen name="Home" component={HomeScreen} />
 
-    {/* Scan Screens */}
-    <Stack.Screen name="DetectRecycling" component={DetectRecyclings} />
+    {/* Scan */}
+    <Stack.Screen name="Scan" component={ScanScreen} />
 
     {/* Make Art Screens */}
-    <Stack.Screen name="ShowInstructibles" component={ShowInstructibles} />
+    <Stack.Screen name="SelectTags" component={SelectTags} />
+    <Stack.Screen name="MakeArt" component={MakeArtScreen} />
+    <Stack.Screen name="Browser" component={Browser} />
 
     {/* Plant */}
-    <Stack.Screen name="VirtualPlant" component={VirtualPlant} />
+    <Stack.Screen name="ViewPlant" component={ViewPlantScreen} />
 
     {/* Social media */}
-    <Stack.Screen name="Forum" component={Forum} />
+    <Stack.Screen name="Forum" component={ForumScreen} />
   </Stack.Navigator>
 );
 

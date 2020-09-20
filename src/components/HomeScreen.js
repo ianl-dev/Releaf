@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 import {View} from 'react-native';
 
@@ -17,20 +17,20 @@ const HomeScreen = ({navigation}) => (
     <Text style={style.title}>Releaf</Text>
 
     {/* Allow the user to go to the plan and explore sections */}
-    <Button
-      onPress={() => navigation.navigate('DetectRecycling')}
-      style={style.button}>
+    <Button onPress={() => navigation.navigate('Scan')} style={style.button}>
       Scan
     </Button>
+
+    {/* Fetch all instructables to show when entering the*/}
     <Button
-      onPress={() => navigation.navigate('ShowInstructibles')}
+      onPress={() => navigation.navigate('SelectTags')}
       style={style.button}>
       Make art
     </Button>
     <Button
-      onPress={() => navigation.navigate('VirtualPlant')}
+      onPress={() => navigation.navigate('ViewPlant')}
       style={style.button}>
-      See your plant
+      See your plants
     </Button>
   </View>
 );
