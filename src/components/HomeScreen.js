@@ -30,7 +30,7 @@ const HomeScreen = ({navigation}) => (
       Make art
     </Button>
     <Button
-      onPress={() => navigation.navigate('ViewPlant')}
+      onPress={() => navigation.navigate('Login')}
       style={style.button}>
       See your plants
     </Button>

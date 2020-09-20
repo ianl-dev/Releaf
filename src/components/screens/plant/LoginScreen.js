@@ -1,4 +1,14 @@
 import {
+  StyleSheet,
+  KeyboardAvoidingView,
+  View,
+  SafeAreaView,
+  ActivityIndicator,
+  TouchableOpacity,
+  Image,
+  TextInput,
+} from 'react-native';
+import {
   Appbar,
   Avatar,
   Searchbar,
@@ -6,36 +16,12 @@ import {
   Title,
   Paragraph,
 } from 'react-native-paper';
-
-import {SafeAreaView, View} from 'react-native';
-import React, {useState, useEffect} from 'react';
-
-// Firebase
-import {firebaseApp} from '../../../firebase';
-
 import {styles} from '../../../styles/form-style';
 import {ScrollView} from 'react-native-gesture-handler';
-import {ShowInstructables} from '../art/ShowInstructables';
 
-export default function MakeArtScreen({navigation}) {
-  // Fetch instructables (async wraps everything into another promise)
-  function getInstructables() {
-    return firebaseApp
-      .database()
-      .ref('/websites/')
-      .once('value')
-      .then(function (snapshot) {
-        return snapshot.val();
-      });
-  }
+import React, {Component} from 'react';
 
-  // getInstructable returns a promise, which shouldn't be set to a variable
-  const [selected, setSelected] = useState([]);
-
-  // Handle side effects
-  useEffect(() => {
-    getInstructables().then((value) => setSelected(value));
-  }, [0]);
+export default function LoginScreen({navigation}) {
 
   return (
     <SafeAreaView style={styles.outer}>
@@ -43,16 +29,52 @@ export default function MakeArtScreen({navigation}) {
         <Appbar.BackAction onPress={() => navigation.navigate('Home')} />
         <Appbar.Content
           titleStyle={styles.center_art}
-          title="Choose your art"
+          title="Login"
         />
       </Appbar.Header>
 
-      <View style={styles.container}>
-        <ShowInstructables
-          navigation={navigation}
-          selected={selected}
-          setSelected={setSelected}></ShowInstructables>
+      <KeyboardAvoidingView behavior="padding" style={styles.container}>
+      <View>
+        <TextInput
+          mode='outlined'
+          label='username'
+          style={styles.input}
+          placeholder={"Username"}
+          secureTextEntry={false}
+          autoCorrect={false}
+          autoCapitalize={'none'}
+          returnKeyType={'done'}
+        />
+        </View>
+        <View>
+        <TextInput
+          mode='outlined'
+          label='password'
+          style={styles.input}
+          placeholder={"Password"}
+          secureTextEntry={true}
+          autoCorrect={false}
+          autoCapitalize={'none'}
+          returnKeyType={'done'}
+        />
+        </View>
+        <View style={styles.calendar_btn}>
+        <Button
+          style={styles.confirm_btn_shape}
+          mode="contained"
+          onPress={() => navigation.navigate('MakeArt', chosen)}>
+          Login
+        </Button>
       </View>
+      <View>
+        <Button
+          style={styles.confirm_btn_shape_updated}
+          mode="none"
+          onPress={() => navigation.navigate('MakeArt', chosen)}>
+          Create Account
+        </Button>
+      </View>
+      </KeyboardAvoidingView>
     </SafeAreaView>
   );
 }
