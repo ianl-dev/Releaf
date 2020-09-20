@@ -22,7 +22,9 @@ const HomeScreen = ({navigation}) => (
     </Button>
 
     {/* Fetch all instructables to show when entering the*/}
-    <Button onPress={() => navigation.navigate('MakeArt')} style={style.button}>
+    <Button
+      onPress={() => navigation.navigate('SelectTags')}
+      style={style.button}>
       Make art
     </Button>
     <Button

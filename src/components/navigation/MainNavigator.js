@@ -9,6 +9,7 @@ import HomeScreen from '../HomeScreen';
 import ScanScreen from '../screens/scan/ScanScreen';
 
 // Make art
+import SelectTags from '../screens/art/SelectTags';
 import MakeArtScreen from '../screens/art/MakeArtScreen';
 import Browser from '../screens/art/Browser';
 
@@ -38,6 +39,7 @@ const MainNavigator = () => (
     <Stack.Screen name="Scan" component={ScanScreen} />
 
     {/* Make Art Screens */}
+    <Stack.Screen name="SelectTags" component={SelectTags} />
     <Stack.Screen name="MakeArt" component={MakeArtScreen} />
     <Stack.Screen name="Browser" component={Browser} />
 
