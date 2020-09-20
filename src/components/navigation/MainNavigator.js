@@ -16,6 +16,7 @@ import Browser from '../screens/art/Browser';
 // Plant
 import ViewPlantScreen from '../screens/plant/ViewPlantScreen';
 import LoginScreen from '../screens/plant/LoginScreen';
+import SignupScreen from '../screens/plant/SignupScreen';
 
 // Social
 import ForumScreen from '../screens/social/ForumScreen';
@@ -47,6 +48,7 @@ const MainNavigator = () => (
     {/* ADD NEW SCREENS HERE */}
     <Stack.Screen name="ViewPlant" component={ViewPlantScreen} />
     <Stack.Screen name="Login" component={LoginScreen} />
+    <Stack.Screen name="Signup" component={SignupScreen} />
 
     {/* Social media */}
     <Stack.Screen name="Forum" component={ForumScreen} />
