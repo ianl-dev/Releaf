@@ -41,7 +41,10 @@ export default function MakeArtScreen({navigation}) {
     <SafeAreaView style={styles.outer}>
       <Appbar.Header>
         <Appbar.BackAction onPress={() => navigation.navigate('Home')} />
-        <Appbar.Content title="Find recycling art" />
+        <Appbar.Content
+          titleStyle={styles.center_art}
+          title="Choose your art"
+        />
       </Appbar.Header>
 
       <View style={styles.container}>

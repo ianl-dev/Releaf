@@ -10,7 +10,7 @@ export default function Browser({route, navigation}) {
     <SafeAreaView style={styles.outer}>
       <Appbar.Header>
         <Appbar.BackAction onPress={() => navigation.navigate('MakeArt')} />
-        <Appbar.Content title="Make your art!" />
+        <Appbar.Content titleStyle={styles.center_art} title="Make it!" />
       </Appbar.Header>
       <WebView source={{uri: link}} />
     </SafeAreaView>
